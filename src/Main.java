@@ -23,10 +23,8 @@ public static void main(String[] args) {
     students.add(student2);
     students.add(student3);
 
-    // Обрабатываем студентов
     processStudents(students);
 
-    // Выводим студентов на 3 курсе
     printStudents(students, 2);
 }
 public static void processStudents(List<Student> students) {
@@ -38,7 +36,6 @@ public static void processStudents(List<Student> students) {
     });
 }
 
-// Метод для вывода имен студентов на заданном курсе
 public static void printStudents(List<Student> students, int course) {
     students.stream()
             .filter(student -> student.getCourse() == course)

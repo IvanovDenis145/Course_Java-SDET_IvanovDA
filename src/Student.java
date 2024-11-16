@@ -7,7 +7,6 @@ public class Student {
     public int Course;
     public Map<String, Integer> GradesInSubjects;
 
-    // Конструктор
     public Student(String name, int group, int course) {
         this.Name = name;
         this.Group = group;
@@ -15,7 +14,6 @@ public class Student {
         this.GradesInSubjects = new HashMap<>();
     }
 
-    // Метод для добавления оценки по предмету
     public void addGrade(String subject, int grade) {
         GradesInSubjects.put(subject, grade);
     }
@@ -30,17 +28,14 @@ public class Student {
                 .orElse(0.0);
     }
 
-    // Метод для перевода студента на следующий курс
     public void promoteToNextCourse() {
         Course++;
     }
 
-    // Метод для получения текущего курса
     public int getCourse() {
         return Course;
     }
 
-    // Метод для получения имени студента
     public String getName() {
         return Name;
     }
